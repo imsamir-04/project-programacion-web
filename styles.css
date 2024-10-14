@@ -1,0 +1,419 @@
+* {
+    max-width: 100%;
+    height: auto;
+}
+
+main {
+    margin-top: 100px;
+}
+header {
+    text-align: center;
+
+    padding-bottom: 0px;
+}
+
+nav {
+    text-align: right;
+    padding: 20px;
+    transition: top 0.3s;
+    position: fixed;
+    top: 0;
+    width: 100%; 
+}
+
+nav a{
+    margin-inline: 10px;
+    text-decoration: none;
+    padding: 20px;
+    border-radius: 5px;
+    font-family: 'Georgia';
+    }
+
+section{
+    text-align: center;
+    font-style: italic;
+    font-family: monospace;
+    border-radius: 10px;
+}
+
+h4 {
+    padding-top: 20px;
+}
+
+
+.home {
+    padding: 20px 20px;
+    background-color:#337055 ;
+    border-radius: 10px;
+
+}
+
+.about {
+    background-color: #9cbd71;
+}
+
+
+#acercademi {
+
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+}
+
+#acercademi label {
+    padding-block: 15px;
+}
+
+#proyecto  {
+    background-color: #cc855b;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.about-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card-body {
+    background-color: #f5d2a5;
+    border-style:dotted;
+}
+/* estilo de la parte de habilidades */
+.skills-container {
+    font-style: italic;
+    font-family: monospace;
+    
+}
+
+
+.skills{
+    backdrop-filter: blur(50px);
+    border-radius: 10px;
+    background-color: #d1ab64;
+    
+}
+
+.skills h1{
+    font-size: 30px;
+    text-align: center;
+    padding-top: 30px;
+}
+
+.skills-bar{
+    padding: 25px 30px;
+}
+.skills-bar .bar{
+    margin: 25px auto;
+    width: 80%;
+}
+
+.skills-bar .bar .info span{
+    font-size: 1rem;
+    font-weight: 900;
+}
+
+.skills-bar .bar .info{
+    text-align: center;
+    margin-bottom: 8px;
+    color: #07374a;
+}
+
+.skills-bar .bar .progress-line{
+    width: 100%; 
+    margin: 0 auto;
+    position: relative;
+    height: 10px;
+    width: 550px;
+    background: #f0f0f0;
+    border-radius: 10px;
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: animate 1s cubic-bezier(1,0,0.5,1) forwards;
+}
+
+.bar .progress-line span{
+    position: absolute;
+    background: #ffbb00;
+    height: 100%;
+    border-radius: 10px;
+    transform: scaleX(0);
+    transform-origin: left;
+    text-transform: uppercase;
+    animation: animate 1s 1s cubic-bezier(1,0,0.5,1) forwards;
+}
+
+@keyframes animate{
+    100%{
+        transform: scaleX(1);
+    }
+}
+.progress-line .html{
+    width: 90%;
+}
+.progress-line .css{
+    width: 80%;
+}
+.progress-line .bootstrap{
+    width: 82%;
+}
+.progress-line .javascript{
+    width: 60%;
+}
+.progress-line .java{
+    width: 65%;
+}
+
+.bar .progress-line span::before{
+    position: absolute;
+    content: "";
+    height: 0;
+    right: 0;
+    top: -14px;
+    width: 0;
+    border: 7px solid transparent;
+    border-bottom-width: 0px;
+    border-right-width: 0px;
+    border-top-style: #f0f0f0 ;
+    border-top-color: #07374a;
+}
+
+.bar .progress-line span::after{
+    position: absolute;
+    right: 0;
+    top: -28px;
+    color: #f0f0f0;
+    font-size: 12px;
+    font-weight: 700;
+    background: #504f4c;
+    padding: 1px 8px;
+    border-radius: 3px;
+}
+
+.progress-line .html::after{
+    content: "90%";
+}
+
+.progress-line .css::after{
+    content: "80%";
+}
+
+.progress-line .bootstrap::after{
+    content: "82%";
+}
+
+.progress-line .javascript::after{
+    content: "60%";
+}
+
+.progress-line .java::after{
+    content: "65%";
+}
+
+/* estilos de la parte de contacto */
+#contacto {
+    padding: 40px;
+    background-color: #6f539c;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 40px auto;
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.2);
+}
+
+#contacto h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+#name #email #subject #message {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+input, textarea {
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+button {
+    background-color: #07374a;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #05648f;
+}
+
+#formMessage {
+    color: red;
+    text-align: center;
+    margin-top: 20px;
+}
+
+footer {
+    background-color: #504f4c;
+    padding: 50px;
+    font-family: 'Arial';   
+    color: #f3d3d3;
+    font-weight: bold;
+    text-align: center;
+    font-size: 23px;
+}
+
+
+
+@media (max-width: 600px) {
+    header {
+        padding: 10px;
+    }
+
+    nav a {
+        display: block; 
+        margin: 5px 0;
+    }
+
+    .btn {
+        display: block; 
+        margin: 5px 0;
+    }
+
+    section {
+        margin: 10px;
+    }
+
+    #habilidades {
+        margin: 10px;
+    }
+
+    footer {
+        margin: 10px;
+    }
+
+    .proyecto {
+        padding: 10px;
+        font-size: 0.9em;
+    }
+}
+
+/* Estilos para tablets */
+@media (min-width: 601px) and (max-width: 900px) {
+    nav a {
+        margin: 0 10px; 
+    }
+
+    .btn {
+        margin: 0 10px; 
+    }
+
+    section {
+        margin: 15px;
+    }
+
+    #habilidades {
+        margin: 15px;
+    }
+
+    footer {
+        margin: 15px;
+    }
+
+    .proyecto {
+        font-size: 1em;
+    }
+}
+
+/* Estilos para pantallas de escritorio */
+@media (min-width: 901px) {
+    header {
+        padding: 20px;
+    }
+
+    nav a {
+        margin: 0 15px;
+    }
+
+    .btn {
+        margin: 0 15px;
+
+    }
+
+    section {
+        margin: 20px auto; 
+        max-width: 800px; 
+    }
+
+    #habilidades {
+        margin: 20px auto;
+        max-width: 800px; 
+    }
+
+    footer {
+        margin: 20px auto;
+        max-width: 800px;
+    }
+
+    .proyecto {
+        padding: 15px;
+        font-size: 1.1em; 
+    }
+}
+
+/* Estilos para el botón de cambio de tema */
+#theme-toggle {
+    margin-left: 20px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#theme-toggle.dark-mode {
+    background-color: #444; 
+    color: #fff; 
+}
+
+/* Estilos para el modo oscuro */
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff; 
+}
+
+
+.dark-mode h1, .dark-mode h2, .dark-mode h3 .dark-mode h5{
+    color: #ffffff; 
+}
+
+body {
+    background-color: white;
+    color: black;
+    transition: background-color 0.5s ease, color 0.5s ease; 
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.fade {
+    opacity: 0.5; 
+    transition: opacity 0.5s ease; 
+}
